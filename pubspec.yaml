@@ -39,6 +39,8 @@ dependencies:
   # syncfusion_flutter_pdfviewer: ^23.1.40
   video_player: ^2.7.2
   assets_audio_player: ^3.1.1
+  image_picker: ^1.0.4
+  camera: ^0.10.5+5
 
 dev_dependencies:
   flutter_test:

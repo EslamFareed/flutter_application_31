@@ -5,7 +5,7 @@ import 'package:flutter_application_31/screens/home_screen.dart';
 import 'package:video_player/video_player.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({super.key});
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
+        title: const Text("Login"),
       ),
       // body: Center(
       //   child: _controller.value.isInitialized
@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
             showNotification: true,
           );
         },
-        child: Text("Play"),
+        child: const Text("Play"),
       ),
 
       // body: Container(

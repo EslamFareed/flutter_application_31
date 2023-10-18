@@ -57,6 +57,18 @@ void main() {
 //! Audio
 
 //? Session 5 flutter
-//! image picker
-//! Datatable
+//! image Picker 
+//! Camera preview 
+//! File Picker
+//! Components reusable code 
+//! const
+//! models
 
+//? Session 6 flutter
+//! Responsive
+//! Adaptiveness
+//! Themes
+
+//? Session 7 flutter
+//! Shared Preferences
+//! intro to local DB
