@@ -67,8 +67,15 @@ void main() {
 //? Session 6 flutter
 //! Responsive
 //! Adaptiveness
-//! Themes
+//! Bottom Navigation Bar
+//! Tab Bar
 
 //? Session 7 flutter
-//! Shared Preferences
+//! Themes
+//! Tranisiton Animation
+//! Page Transition
+//! Lottie Animation
+//! Hero Animation
+//! Explicit X Implicit Animation
 //! intro to local DB
+//! Shared Preferences
