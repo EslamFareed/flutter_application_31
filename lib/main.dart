@@ -1,8 +1,13 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_31/repos/shared_helper.dart';
 import 'package:flutter_application_31/root/app_root.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await SharedHelper.init();
+
   runApp(MyApp());
 }
 
@@ -75,7 +80,10 @@ void main() {
 //! Tranisiton Animation
 //! Page Transition
 //! Lottie Animation
-//! Hero Animation
-//! Explicit X Implicit Animation
 //! intro to local DB
 //! Shared Preferences
+
+//? Session 8 Flutter
+//! Hero Animation
+//! implicit Animation
+//! Explicit Animation

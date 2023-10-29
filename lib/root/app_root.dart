@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_31/screens/bottom_naivgation_screen.dart';
-import 'package:flutter_application_31/screens/camera_screen.dart';
+import 'package:flutter_application_31/repos/shared_helper.dart';
 import 'package:flutter_application_31/screens/home_screen.dart';
-import 'package:flutter_application_31/screens/image_picker_screen.dart';
-import 'package:flutter_application_31/screens/login_screen.dart';
-import 'package:flutter_application_31/screens/posts_screen.dart';
-import 'package:flutter_application_31/screens/responsive_screen.dart';
-import 'package:flutter_application_31/screens/sign_in_screen.dart';
-import 'package:flutter_application_31/screens/splash_screen.dart';
+
+import 'package:flutter_application_31/screens/session_7/session_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,13 +11,39 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BottomNavigationScreen(),
-      // routes: {
-      //   "login": (context) => LoginScreen(),
-      //   "home": (context) => HomeScreen(),
-      //   "splash": (context) => SplashScreen(),
-      // },
-      // initialRoute: "login",
+      home: SharedHelper.prefs.getBool("isLogin") ?? false
+          ? HomeScreen()
+          : Session7Screen(),
+      // theme: ThemeData.dark(),
+      darkTheme: ThemeData.dark(useMaterial3: true),
+      theme: ThemeData.light(useMaterial3: true),
+      themeMode: ThemeMode.light,
+      // scaffoldBackgroundColor: Colors.amber,
+      // appBarTheme: AppBarTheme(
+      //   backgroundColor: Colors.black45,
+      // )),
+      // theme: ThemeData(
+      //   scaffoldBackgroundColor: Colors.black,
+      //   colorScheme: ColorScheme.fromSwatch(
+      //     primarySwatch: Colors.amber,
+      //     accentColor: Colors.white,
+      //     backgroundColor: Colors.black,
+      //   ),
+      //   // elevatedButtonTheme: ElevatedButtonThemeData(
+      //   //     style: ButtonStyle(
+      //   //   backgroundColor: MaterialStatePropertyAll(Colors.amber),
+      //   // )),
+      //   appBarTheme: AppBarTheme(
+      //     backgroundColor: Colors.amber,
+      //     foregroundColor: Colors.black,
+      //     titleTextStyle: TextStyle(
+      //       fontSize: 10,
+      //       fontWeight: FontWeight.bold,
+      //       letterSpacing: 2,
+      //       wordSpacing: 5,
+      //     ),
+      //   ),
+      // ),
     );
   }
 }

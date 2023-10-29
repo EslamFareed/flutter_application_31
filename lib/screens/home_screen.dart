@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_application_31/repos/shared_helper.dart';
+import 'package:flutter_application_31/screens/session_7/session_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -22,6 +24,19 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Home"),
+        actions: [
+          IconButton(
+              onPressed: () {
+                SharedHelper.prefs.setBool("isLogin", false).then((value) {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Session7Screen(),
+                      ));
+                });
+              },
+              icon: const Icon(Icons.logout))
+        ],
       ),
       // body: GridView.builder(
       //   gridDelegate:
